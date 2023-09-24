@@ -31,5 +31,20 @@
         </div>
     </div>
 </body>
+<script>
+    // Function to check login credentials and redirect
+    document.getElementById('signIn').addEventListener('click', function () {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        if (email === 'admin' && password === '1234') {
+            // Redirect to a new page (you can change the URL)
+            window.location.href = 'https://dhananjay-d.github.io/Travel-Influencer/';
+        } else {
+            // Display an error message (you can customize this)
+            alert('Invalid credentials. Please try again.');
+        }
+    });
+</script>
 
 </html>
