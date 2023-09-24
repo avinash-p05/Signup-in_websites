@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <h2 class="text-blue-700 text-3xl font-semibold my-0 bg-slate-200 pt-3"><center>Bharat Tourism</center></h2>
     <div class="flex justify-center items-center h-screen bg-slate-200">
         <div id="form" class="block bg-slate-50 p-6 rounded-xl shadow-md shadow-slate-300 w-90">
             <form id="loginForm">
@@ -38,7 +39,11 @@
             if (email === 'admin@gmail.com' && password === '1234') {
                 // Redirect to a new page (you can change the URL)
                 window.location.href = 'https://dhananjay-d.github.io/Travel-Influencer/';
-            } else {
+            }
+            else if(email=='influencer@gmail.com' && password == '777'){
+                window.location.href = 'h';
+            }
+             else {
                 // Display an error message (you can customize this)
                 alert('Invalid credentials. Please try again.');
             }
