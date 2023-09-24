@@ -14,8 +14,8 @@
         <div id="form" class="block bg-slate-50 p-6 rounded-xl shadow-md shadow-slate-300 w-90">
             <form action="" class>
                 <h2 class="text-blue-700 text-3xl font-semibold my-4">Sign in</h2>
-                <label for="email" class="text-sm">Email*</label><br>
-                <input type="email" name="" id="email"
+                <label for="username" class="text-sm">username*</label><br>
+                <input type="text" name="" id="email"
                     class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm" required>
                 <label for="password" class="text-sm">Password*</label><br>
                 <input type="password" name="" id="password"
@@ -37,7 +37,7 @@
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
-        if (email === 'admin@gmail.com' && password === '1234') {
+        if (email === 'admin' && password === '1234') {
             // Redirect to a new page (you can change the URL)
             window.location.href = 'https://dhananjay-d.github.io/Travel-Influencer/';
         } else {
