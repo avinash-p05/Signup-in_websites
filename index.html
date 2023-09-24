@@ -12,39 +12,38 @@
 <body>
     <div class="flex justify-center items-center h-screen bg-slate-200">
         <div id="form" class="block bg-slate-50 p-6 rounded-xl shadow-md shadow-slate-300 w-90">
-            <form action="" class>
+            <form id="loginForm">
                 <h2 class="text-blue-700 text-3xl font-semibold my-4">Sign in</h2>
-                <label for="username" class="text-sm">Username*</label><br>
-                <input type="text" name="" id="email"
-                    class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm" required>
+                <label for="email" class="text-sm">Email*</label><br>
+                <input type="text" id="email" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm" required>
                 <label for="password" class="text-sm">Password*</label><br>
-                <input type="password" name="" id="password"
-                    class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm" required>
-                    <center>
-                    <label for="check" class="text-sm">Agree to terms and conditons.</label><br>
-                    <input type="checkbox" name="" id="check" required>
+                <input type="password" id="password" class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm" required>
+                <center>
+                    <label for="check" class="text-sm">Agree to terms and conditions.</label><br>
+                    <input type="checkbox" id="check" required>
                 </center>
-                <input type="submit" name="" id="signUp"
-                    class="bg-blue-700 w-full h-10 cursor-pointer text-white rounded-md hover:bg-blue-700 hover:outline outline-2 outline-blue-600 outline-offset-2 text-sm"><br>
-                <p class="text-xs my-2"> account?<a href="signup.html" class="text-blue-600">Sign Up</a></p>
+                <input type="submit" value="Sign In" class="bg-blue-700 w-full h-10 cursor-pointer text-white rounded-md hover:bg-blue-700 hover:outline outline-2 outline-blue-600 outline-offset-2 text-sm"><br>
+                <p class="text-xs my-2">Don't have an account?<a href="signup.html" class="text-blue-600">Sign Up</a></p>
             </form>
         </div>
     </div>
-</body>
-<script>
-    // Function to check login credentials and redirect
-    document.getElementById('signUp').addEventListener('click', function () {
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
 
-        if (email === 'admin' && password === '1234') {
-            // Redirect to a new page (you can change the URL)
-            window.location.href = 'https://dhananjay-d.github.io/Travel-Influencer/';
-        } else {
-            // Display an error message (you can customize this)
-            alert('Invalid credentials. Please try again.');
-        }
-    });
-</script>
+    <script>
+        // Function to check login credentials and redirect
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (email === 'admin@gmail.com' && password === '1234') {
+                // Redirect to a new page (you can change the URL)
+                window.location.href = 'https://dhananjay-d.github.io/Travel-Influencer/';
+            } else {
+                // Display an error message (you can customize this)
+                alert('Invalid credentials. Please try again.');
+            }
+        });
+    </script>
+</body>
 
 </html>
